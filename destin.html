@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Destination</title>
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            text-align:center;
+            padding-top:100px;
+            background:url("bgsand.jpeg") no-repeat center/cover;;
+        }
+
+        h1{
+            margin-bottom:40px;
+        }
+
+        select{
+            padding:10px;
+            font-size:16px;
+            width:220px;
+        }
+        .side{
+    position: fixed;
+    right: 0;
+    top: 20%;
+    transform: translateY(-50%);
+    padding: 12px 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    top: 90%;
+}
+
+        button{
+            margin-top:20px;
+            padding:10px 20px;
+            font-size:16px;
+            cursor:pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<h1>Select Your Destination</h1>
+
+<select id="destination">
+    <option value="kovalam.html">Kovalam Beach</option>
+    <option value="varkala.html">Varkala Beach</option>
+</select>
+
+<br>
+
+<button onclick="goToPage()">
+    Show Safety Information
+</button>
+<div class="side">
+<button onclick="goToPageT()">
+    Show Weather
+</button>
+<button onclick="goToPageTs()">
+    Emergency Contacts
+</button>
+<button onclick="goToPageTst()">
+    Restricted Zones
+</button>
+<button onclick="goToPageTstm()">
+    Facilities
+</button>
+
+
+</div>
+
+
+<script>
+function goToPageT(){
+    window.location.href = "var.html";
+}
+function goToPageTs(){
+    window.location.href = "eme.html";
+}
+function goToPageTst(){
+    window.location.href = "Restricted.html";
+}
+function goToPageTstm(){
+    window.location.href = "nei.html";
+}
+function goToPage(){
+    var selectedPage =
+        document.getElementById("destination").value;
+
+    window.location.href = selectedPage;
+}
+
+</script>
+
+</body>
+</html>

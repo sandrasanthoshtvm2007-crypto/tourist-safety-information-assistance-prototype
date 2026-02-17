@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Smart Coastal Weather Guide</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    text-align:center;
+    background: linear-gradient(to right,#1e3c72,#2a5298);
+    color:white;
+    padding:40px;
+}
+
+.container{
+    background: rgba(255,255,255,0.1);
+    padding:30px;
+    border-radius:15px;
+    width:80%;
+    max-width:600px;
+    margin:auto;
+}
+
+select, button{
+    padding:10px;
+    font-size:16px;
+    margin-top:10px;
+}
+
+button{
+    background:orange;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#ff9c00;
+}
+
+.weatherBox{
+    background:white;
+    color:black;
+    padding:15px;
+    border-radius:10px;
+    margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🌊 Weather Details</h1>
+
+<h3>Select Beach</h3>
+
+<select id="beachSelect">
+    <option value="Varkala">Varkala Beach</option>
+    <option value="Kovalam">Kovalam Beach</option>
+</select>
+
+<br>
+
+<button onclick="loadWeather()">Show Weather</button>
+
+<div class="weatherBox">
+    <h3>Live Weather</h3>
+    <p id="weatherResult"></p>
+</div>
+<button class="back-btn" onclick="goBackss()">Back to Home</button>
+
+</div>
+
+<script>
+    function goBackss(){
+    window.location.href = "sample1.html";
+}
+async function loadWeather(){
+
+    const apiKey = "02143c7492d048f196f73d9ff7ccc8ae";   // 🔑 Put your real API key here
+
+    const city =
+        document.getElementById("beachSelect").value;
+
+    const url =
+    `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+    try{
+        const response = await fetch(url);
+        const data = await response.json();
+
+        document.getElementById("weatherResult").innerHTML =
+        `📍 ${city} Beach<br><br>
+         🌡 Temperature: ${data.main.temp} °C<br>
+         🌤 Condition: ${data.weather[0].description}<br>
+         💧 Humidity: ${data.main.humidity}%<br>
+         Humidity: ${data.main.humidity}%<br>
+         💨 Wind Speed: ${data.wind.speed} m/s`;
+    }
+    catch{
+        document.getElementById("weatherResult").innerHTML =
+        "Weather unavailable";
+    }
+
+}
+</script>
+
+</body>
+</html>

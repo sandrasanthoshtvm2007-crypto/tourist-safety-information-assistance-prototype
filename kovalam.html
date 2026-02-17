@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kovalam Beach - Smart Coastal</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color:white;
+    text-align:center;
+}
+
+/* Header */
+header{
+    padding:25px;
+    font-size:28px;
+    font-weight:700;
+    letter-spacing:1px;
+    background: rgba(0,0,0,0.3);
+}
+
+/* Main Container */
+.container{
+    padding:40px 20px;
+}
+
+/* Card Style */
+.card{
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    padding:25px;
+    margin:20px auto;
+    width:80%;
+    max-width:600px;
+    border-radius:15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.03);
+}
+
+/* Headings */
+h2{
+    margin-bottom:15px;
+    color:#fff200;
+}
+
+/* List Style */
+ul{
+    list-style:none;
+    padding:0;
+}
+
+ul li{
+    margin:10px 0;
+    font-size:16px;
+}
+link{
+    width:300px;
+    background: #bdad04;
+}
+
+/* Button */
+.back-btn{
+    margin-top:30px;
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    background:#fff200;
+    color:#1e3c72;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.back-btn:hover{
+    background:white;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+🌅 Kovalam Beach Safety Guide
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>🌤 Weather Safety</h2>
+        <ul>
+            <li>✔ Check weather updates before visiting</li>
+            <li>✔ Avoid beach during strong winds</li>
+            <li>✔ Stay hydrated in hot weather</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>🌊 Sea & Water Sports Safety</h2>
+        <ul>
+            <li>✔ Follow lifeguard instructions</li>
+            <li>✔ Wear safety jackets for water sports</li>
+            <li>✔ Avoid swimming in restricted zones</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>🚨 Emergency Contacts</h2>
+        <ul>
+            <li>📞 Police: 100</li>
+            <li>🚑 Ambulance: 108</li>
+            <li>🌊 Coast Guard: 1554</li>
+        </ul>
+    </div>
+<div class="link">
+    <a href="https://www.google.com/maps/search/?api=1&query=8.3865,76.9766" target="_blank">
+    View Kovalam Beach Location on Map
+    </a>
+</div>
+    <button class="back-btn" onclick="goBack()">Back to Home</button>
+    <button class="back-btn" onclick="goBackm()">Show Images</button>
+
+</div>
+
+<script>
+function goBack(){
+    window.location.href = "sample1.html";
+}
+function goBackm(){
+    window.location.href = "imagesko.html";
+}
+</script>
+
+</body>
+</html>

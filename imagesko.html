@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Beach Gallery</title>
+
+<style>
+body{
+    font-family: Arial;
+    padding:20px;
+    text-align:center;
+}
+
+/* Section title */
+h2{
+    margin-top:40px;
+}
+
+/* Gallery grid */
+.gallery{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:15px;
+    margin-top:15px;
+}
+
+/* Images */
+.gallery img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+/* Responsive */
+@media(max-width:900px){
+    .gallery{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width:500px){
+    .gallery{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<h1>Kerala Beach Destinations</h1>
+
+<!-- Kovalam -->
+<h2>Kovalam Beach</h2>
+<div class="gallery">
+    <img src="kovalam beach image.png">
+    <img src="kovalam image 3.png">
+    <img src="kvimage4.png">
+    <img src="kovalam image2.png">
+</div>
+
+</body>
+</html>

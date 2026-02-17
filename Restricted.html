@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Coastal Restricted Zones</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+}
+
+/* Section */
+.restricted-section{
+    padding:80px 20px;
+}
+
+/* Title */
+.section-title{
+    text-align:center;
+    font-size:32px;
+    margin-bottom:60px;
+    background: linear-gradient(to right,#ffd700,#ff9c00);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    letter-spacing:2px;
+}
+
+/* Beach Box */
+.beach-box{
+    margin:40px auto;
+    padding:30px;
+    width:90%;
+    max-width:1000px;
+    border-radius:20px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* Beach Header */
+.beach-header{
+    font-size:24px;
+    font-weight:600;
+    margin-bottom:30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.badge{
+    font-size:12px;
+    padding:6px 12px;
+    background:orange;
+    border-radius:20px;
+    color:white;
+}
+
+/* Grid */
+.zone-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+/* Cards */
+.zone-card{
+    background: rgba(255,255,255,0.1);
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    transition:0.4s;
+}
+
+.zone-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(255,165,0,0.5);
+}
+
+.zone-icon{
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.zone-card h3{
+    margin-bottom:10px;
+    color:#ffd700;
+}
+
+.zone-card p{
+    font-size:14px;
+    line-height:1.6;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .beach-header{
+        flex-direction:column;
+        gap:10px;
+        text-align:center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="restricted-section">
+
+    <h1 class="section-title">
+        ⚠ Coastal Restricted Zones & Regulations
+    </h1>
+
+    <!-- VARKALA -->
+    <div class="beach-box">
+
+        <div class="beach-header">
+            🌊 Varkala Beach
+            <span class="badge">Geo-Heritage Zone</span>
+        </div>
+
+        <div class="zone-grid">
+
+            <div class="zone-card">
+                <div class="zone-icon">⛰</div>
+                <h3>Cliff Edge Vulnerability</h3>
+                <p>Fragile cliff areas prone to erosion. Avoid unstable edges.</p>
+            </div>
+
+            <div class="zone-card">
+                <div class="zone-icon">📏</div>
+                <h3>CRZ – 3B Regulation</h3>
+                <p>No permanent construction within 200m of High Tide Line.</p>
+            </div>
+
+            <div class="zone-card">
+                <div class="zone-icon">🌧</div>
+                <h3>Monsoon Hazard Zone</h3>
+                <p>Swimming restricted during heavy rain & rough sea.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- KOVALAM -->
+    <div class="beach-box">
+
+        <div class="beach-header">
+            🌅 Kovalam Beach
+            <span class="badge">Tourist Safety Zone</span>
+        </div>
+
+        <div class="zone-grid">
+
+            <div class="zone-card">
+                <div class="zone-icon">🚫</div>
+                <h3>Swimming Restricted Areas</h3>
+                <p>Red flag zones indicate no swimming allowed.</p>
+            </div>
+
+            <div class="zone-card">
+                <div class="zone-icon">🚤</div>
+                <h3>Water Sports Safety</h3>
+                <p>Only designated zones allowed for water activities.</p>
+            </div>
+
+            <div class="zone-card">
+                <div class="zone-icon">📍</div>
+                <h3>CRZ Regulation</h3>
+                <p>Construction prohibited within 200m of HTL.</p>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+</body>
+</html>

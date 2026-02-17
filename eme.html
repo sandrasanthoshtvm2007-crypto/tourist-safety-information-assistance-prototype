@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Emergency Contacts</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#f5f5f5;
+    text-align:center;
+}
+
+/* Header */
+header{
+    background:#0077b6;
+    color:white;
+    padding:20px;
+}
+
+/* Container */
+.container{
+    width:90%;
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+
+/* Cards */
+.contact-card{
+    background:white;
+    padding:20px;
+    margin:15px 0;
+    border-radius:8px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.2);
+}
+
+.contact-card h3{
+    margin:0;
+}
+
+.call-btn{
+    display:inline-block;
+    margin-top:10px;
+    padding:8px 15px;
+    background:#0077b6;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.call-btn:hover{
+    background:#005f87;
+}
+
+/* Back Button */
+.back-btn{
+    margin:20px;
+    padding:10px 20px;
+    border:none;
+    background:orange;
+    color:white;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Emergency Contacts</h1>
+<p>For Tourist Safety & Assistance</p>
+</header>
+
+<div class="container">
+
+<div class="contact-card">
+<h3>🚓 Police Emergency</h3>
+<p>Call for immediate police help.</p>
+<a href="tel:100" class="call-btn">Call 100</a>
+</div>
+
+<div class="contact-card">
+<h3>🚑 Ambulance Service</h3>
+<p>Medical emergency assistance.</p>
+<a href="tel:108" class="call-btn">Call 108</a>
+</div>
+
+<div class="contact-card">
+<h3>🔥 Fire & Rescue</h3>
+<p>Fire and disaster emergency.</p>
+<a href="tel:101" class="call-btn">Call 101</a>
+</div>
+
+<div class="contact-card">
+<h3>🏖 Tourist Help Desk</h3>
+<p>Tourism information and help.</p>
+<a href="tel:1363" class="call-btn">Call 1363</a>
+</div>
+
+<button class="back-btn" onclick="goHome()">Back to Home</button>
+
+</div>
+
+<script>
+function goHome(){
+    window.location.href="destin.html";
+}
+</script>
+
+</body>
+</html>
